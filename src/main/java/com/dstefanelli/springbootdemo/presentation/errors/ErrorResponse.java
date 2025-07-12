@@ -2,7 +2,6 @@ package com.dstefanelli.springbootdemo.presentation.errors;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 
