@@ -15,14 +15,14 @@ CREATE TABLE player_profile
     level                  INTEGER      NOT NULL,
     xp                     INTEGER          DEFAULT 0,
     total_playtime_minutes INTEGER          DEFAULT 0,
-    country_code           VARCHAR(10),
+    country_code           VARCHAR(10)  NOT NULL,
     language               VARCHAR(10),
     birthdate              TIMESTAMP,
     gender                 Gender,
     total_spent            INTEGER          DEFAULT 0,
     total_refund           INTEGER          DEFAULT 0,
     total_transactions     INTEGER          DEFAULT 0,
-    clan_id                VARCHAR(50)
+    clan_id                VARCHAR(50)  NOT NULL
         CONSTRAINT fk_player_clan REFERENCES clan (id),
     created                TIMESTAMP    NOT NULL,
     modified               TIMESTAMP    NOT NULL,
@@ -46,6 +46,6 @@ CREATE TABLE inventory_item
             REFERENCES player_profile (id)
             ON DELETE CASCADE,
     item_code VARCHAR(255) NOT NULL,
-    quantity     INTEGER DEFAULT 0,
+    quantity  INTEGER DEFAULT 0,
     PRIMARY KEY (player_id, item_code)
 );
