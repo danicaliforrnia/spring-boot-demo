@@ -34,4 +34,4 @@ build/
 
 ### Envs and properties
 .env
-*-local.properties
+*-local.yml
