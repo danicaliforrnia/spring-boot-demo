@@ -1,7 +1,7 @@
 package com.dstefanelli.springbootdemo.application.usecase;
 
 import com.dstefanelli.springbootdemo.application.dto.MatchedProfileDto;
-import com.dstefanelli.springbootdemo.domain.model.PlayerProfile;
+import com.dstefanelli.springbootdemo.domain.model.player.PlayerProfile;
 import com.dstefanelli.springbootdemo.application.exceptions.PlayerProfileNotFound;
 import com.dstefanelli.springbootdemo.domain.repository.PlayerProfileRepository;
 import com.dstefanelli.springbootdemo.domain.service.CampaignsClient;

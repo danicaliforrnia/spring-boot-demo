@@ -1,4 +1,4 @@
-package com.dstefanelli.springbootdemo.domain.model;
+package com.dstefanelli.springbootdemo.domain.model.player;
 
 public enum Credentials {
     APPLE("apple_credential"),

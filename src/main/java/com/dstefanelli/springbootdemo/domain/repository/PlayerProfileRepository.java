@@ -1,6 +1,6 @@
 package com.dstefanelli.springbootdemo.domain.repository;
 
-import com.dstefanelli.springbootdemo.domain.model.PlayerProfile;
+import com.dstefanelli.springbootdemo.domain.model.player.PlayerProfile;
 
 import java.util.Optional;
 import java.util.UUID;

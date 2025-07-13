@@ -1,5 +1,7 @@
-package com.dstefanelli.springbootdemo.domain.model;
+package com.dstefanelli.springbootdemo.domain.model.player;
 
+import com.dstefanelli.springbootdemo.domain.model.campaign.Campaign;
+import com.dstefanelli.springbootdemo.domain.model.campaign.PlayerCampaignMatcher;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -39,4 +41,13 @@ public class PlayerProfile {
     public List<Campaign> getActiveCampaigns(List<Campaign> currentCampaigns) {
         return currentCampaigns.stream().filter(campaign -> PlayerCampaignMatcher.matches(this, campaign)).toList();
     }
+
+    public boolean hasItem(String item) {
+        return inventory.containsKey(item) && inventory.get(item) > 0;
+    }
+
+    public boolean lacksItem(String item) {
+        return !inventory.containsKey(item) || inventory.get(item) <= 0;
+    }
+
 }

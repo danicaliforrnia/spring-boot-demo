@@ -1,4 +1,4 @@
-package com.dstefanelli.springbootdemo.domain.model;
+package com.dstefanelli.springbootdemo.infrastructure.client;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

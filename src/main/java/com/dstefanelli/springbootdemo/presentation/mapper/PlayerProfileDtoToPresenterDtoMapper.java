@@ -1,7 +1,7 @@
 package com.dstefanelli.springbootdemo.presentation.mapper;
 
 import com.dstefanelli.springbootdemo.application.dto.MatchedProfileDto;
-import com.dstefanelli.springbootdemo.domain.model.Campaign;
+import com.dstefanelli.springbootdemo.domain.model.campaign.Campaign;
 import com.dstefanelli.springbootdemo.presentation.dto.MatchedProfilePresenterDto;
 
 public class PlayerProfileDtoToPresenterDtoMapper {
