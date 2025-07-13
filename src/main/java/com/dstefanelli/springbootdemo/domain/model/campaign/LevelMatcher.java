@@ -1,10 +1,6 @@
 package com.dstefanelli.springbootdemo.domain.model.campaign;
 
 import com.dstefanelli.springbootdemo.domain.model.player.PlayerProfile;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-import java.util.List;
 
 public class LevelMatcher implements Matcher {
     private final int min;
