@@ -7,6 +7,12 @@ import com.dstefanelli.springbootdemo.presentation.dto.MatchedProfilePresenterDt
 public class PlayerProfileDtoToPresenterDtoMapper {
 
     public static MatchedProfilePresenterDto map(MatchedProfileDto matchedProfileDto) {
-        return new MatchedProfilePresenterDto(matchedProfileDto.playerId(), matchedProfileDto.activeCampaigns().stream().map(Campaign::getName).toList());
+        return new MatchedProfilePresenterDto(
+                matchedProfileDto.id(),
+                matchedProfileDto.level(),
+                matchedProfileDto.xp(),
+                matchedProfileDto.countryCode(),
+                matchedProfileDto.inventory(),
+                matchedProfileDto.activeCampaigns().stream().map(Campaign::getName).toList());
     }
 }

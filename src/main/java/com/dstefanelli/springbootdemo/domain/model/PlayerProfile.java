@@ -18,6 +18,7 @@ public class PlayerProfile {
     private LocalDate birthdate;
     @Getter
     private Integer level;
+    @Getter
     private Integer xp;
     private Integer totalPlaytimeMinutes;
     @Getter

@@ -29,7 +29,7 @@ public class ClientConfigController {
         this.matchCampaignsToPlayerProfileUseCase = matchCampaignsToPlayerProfileUseCase;
     }
 
-    @GetMapping(value = "/{playerId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/{playerId}", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Get player active campaigns", description = "Get player active campaigns by providing the player id")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Player found with a list of active campaigns (or empty)",

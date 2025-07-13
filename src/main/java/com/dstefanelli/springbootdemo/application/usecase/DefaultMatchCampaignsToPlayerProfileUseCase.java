@@ -23,6 +23,11 @@ public class DefaultMatchCampaignsToPlayerProfileUseCase implements MatchCampaig
         PlayerProfile profile = playerProfileRepository.findById(playerId)
                 .orElseThrow(() -> new PlayerProfileNotFound(playerId));
         var currentCampaigns = campaignsClient.fetchCurrentCampaigns();
-        return new MatchedProfileDto(profile.getId(), profile.getActiveCampaigns(currentCampaigns));
+        return new MatchedProfileDto(profile.getId(),
+                profile.getLevel(),
+                profile.getXp(),
+                profile.getCountryCode(),
+                profile.getInventory(),
+                profile.getActiveCampaigns(currentCampaigns));
     }
 }
