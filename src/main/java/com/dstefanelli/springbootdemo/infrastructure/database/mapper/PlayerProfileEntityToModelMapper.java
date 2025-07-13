@@ -1,7 +1,7 @@
 package com.dstefanelli.springbootdemo.infrastructure.database.mapper;
 
-import com.dstefanelli.springbootdemo.domain.model.Clan;
-import com.dstefanelli.springbootdemo.domain.model.PlayerProfile;
+import com.dstefanelli.springbootdemo.domain.model.player.Clan;
+import com.dstefanelli.springbootdemo.domain.model.player.PlayerProfile;
 import com.dstefanelli.springbootdemo.infrastructure.database.entities.PlayerProfileEntity;
 
 public class PlayerProfileEntityToModelMapper {
