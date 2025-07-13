@@ -36,6 +36,6 @@ public class PlayerProfile {
     private LocalDateTime lastPurchase;
 
     public List<Campaign> getActiveCampaigns(List<Campaign> currentCampaigns) {
-        return currentCampaigns.stream().filter(campaign -> CampaignMatcher.matches(this, campaign)).toList();
+        return currentCampaigns.stream().filter(campaign -> PlayerCampaignMatcher.matches(this, campaign)).toList();
     }
 }

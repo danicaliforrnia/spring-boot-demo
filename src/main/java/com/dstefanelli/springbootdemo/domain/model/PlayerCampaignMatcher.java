@@ -1,6 +1,6 @@
 package com.dstefanelli.springbootdemo.domain.model;
 
-public class CampaignMatcher {
+public class PlayerCampaignMatcher {
     public static boolean matches(PlayerProfile profile, Campaign campaign) {
         boolean levelMatch = profile.getLevel() >= campaign.getMatchers().getLevel().getMin()
                 && profile.getLevel() <= campaign.getMatchers().getLevel().getMax();
