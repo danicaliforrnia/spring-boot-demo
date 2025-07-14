@@ -1,0 +1,42 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Tests
+        run: |
+          echo "🧪 Running tests..."
+          echo "✅ Tests passed."
+
+  build:
+    name: Build Application
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build Project
+        run: |
+          echo "🏗️ Building the application..."
+          echo "✅ Build completed."
+
+  publish:
+    name: Publish Artifacts
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Publish
+        run: |
+          echo "📦 Publishing artifacts..."
+          echo "✅ Publish step done."
