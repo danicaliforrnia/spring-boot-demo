@@ -21,22 +21,7 @@
       <a href="#usage">Usage</a>
       <ul>
         <li><a href="#directory-structure">Directory structure</a></li>
-        <li><a href="#run-project-locally">Run Project locally</a></li>
-        <li><a href="#create-a-new-database-migration">Create a new database migration</a></li>
-        <li><a href="#update-database-and-prisma-client">Update database and Prisma client</a></li>
-        <li><a href="#create-a-new-seed">Create a new seed</a></li>
-        <li><a href="#create-a-new-app">Create a new app</a></li>
-        <li><a href="#create-a-new-lib">Create a new lib</a></li>
-        <li><a href="#openapi-spec-and-swagger">OpenAPI spec and Swagger</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#cloud-environment">Cloud Environment</a>
-      <ul>
-        <li><a href="#infrastructure">Infrastructure</a></li>
-        <li><a href="#iac-with-terraform">IaC with Terraform</a></li>
-        <li><a href="#provisioning-with-ansible">Provisioning with Ansible</a></li>
-        <li><a href="#ci-cd-pipelines">CI/CD Pipelines</a></li>
+        <li><a href="#adding-a-new-migration">Adding a new migration</a></li>
       </ul>
     </li>
   </ol>
