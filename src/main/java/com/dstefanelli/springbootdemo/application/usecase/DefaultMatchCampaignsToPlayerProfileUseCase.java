@@ -1,5 +1,6 @@
 package com.dstefanelli.springbootdemo.application.usecase;
 
+import com.dstefanelli.springbootdemo.application.dto.CampaignDto;
 import com.dstefanelli.springbootdemo.application.dto.MatchedProfileDto;
 import com.dstefanelli.springbootdemo.domain.model.player.PlayerProfile;
 import com.dstefanelli.springbootdemo.application.exceptions.PlayerProfileNotFound;
@@ -7,6 +8,7 @@ import com.dstefanelli.springbootdemo.domain.repository.PlayerProfileRepository;
 import com.dstefanelli.springbootdemo.domain.service.CampaignsClient;
 
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 public class DefaultMatchCampaignsToPlayerProfileUseCase implements MatchCampaignsToPlayerProfileUseCase {
     private final PlayerProfileRepository playerProfileRepository;
@@ -28,6 +30,9 @@ public class DefaultMatchCampaignsToPlayerProfileUseCase implements MatchCampaig
                 profile.getXp(),
                 profile.getCountryCode(),
                 profile.getInventory(),
-                profile.getActiveCampaigns(currentCampaigns));
+                profile.getActiveCampaigns(currentCampaigns)
+                        .stream()
+                        .map(campaign -> new CampaignDto(campaign.getGame(), campaign.getName()))
+                        .toList());
     }
 }
