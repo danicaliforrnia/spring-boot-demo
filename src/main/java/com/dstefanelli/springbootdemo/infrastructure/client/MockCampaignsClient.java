@@ -23,6 +23,19 @@ public class MockCampaignsClient implements CampaignsClient {
                     LocalDateTime.now().minusDays(1),
                     LocalDateTime.now().plusDays(7),
                     LocalDateTime.now()
+            ),
+            new CampaignResponse("mygame2",
+                    "mycampaign2",
+                    9.0,
+                    true,
+                    new CampaignMatchers(
+                            new CampaignMatchers.Level(5, 10),
+                            new CampaignMatchers.Has(List.of("US", "RO", "CA"), List.of("item_1")),
+                            new CampaignMatchers.DoesNotHave(List.of("item_4"))
+                    ),
+                    LocalDateTime.now().minusDays(1),
+                    LocalDateTime.now().plusDays(7),
+                    LocalDateTime.now()
             )
     );
 
