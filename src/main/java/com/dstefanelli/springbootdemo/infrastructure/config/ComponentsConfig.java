@@ -21,7 +21,7 @@ public class ComponentsConfig {
     }
 
     @Bean
-    public MatchCampaignsToPlayerProfileUseCase flightsService() {
+    public MatchCampaignsToPlayerProfileUseCase matchCampaignsToPlayerProfileUseCase() {
         return new DefaultMatchCampaignsToPlayerProfileUseCase(postgresPlayerProfileRepository, campaignsClient);
     }
 
